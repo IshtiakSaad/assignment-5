@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const donationSection = document.getElementById('donationSection');
     const historySection = document.getElementById('historySection');
     const historyButton = document.getElementById('historyBtn');
-    const donateButton = document.getElementById('donateBtn');  
+    const donateButton = document.getElementById('donateBtn');
+    const blogButton = document.getElementById('blog-btn');  
 
     donateButtons.forEach((btn) => {
         btn.addEventListener('click', function(event) {
@@ -63,4 +64,8 @@ document.addEventListener('DOMContentLoaded', () => {
         historyButton.classList.remove('bg-primary');
         historyButton.classList.add('bg-white');
     });
+
+    blogButton.addEventListener('click', ()=> {
+        window.location.href = "blog.html";
+    })
 });

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+
+    <!-- Daisy UI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">        
+   
+    <!-- Font Awesome CDN -->
+    <script src="https://kit.fontawesome.com/7d2f1019cd.js" crossorigin="anonymous"></script>
+    
+    <!-- Font -->
+    <style>
+        .font-lexend { font-family: "Lexend", sans-serif; }
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#abef5f',
+                        secondary: '#abef5f80'
+                    }
+                }
+            }
+        }
+    </script>
+    
+</head>
+<body class="font-lexend">
+    <header class="mx-auto sticky top-0 z-10 bg-opacity-80 backdrop-blur-md">
+        <div class="bg-base-200">
+            <div class="lg:w-4/5 mx-auto navbar lg:pt-5 lg:pb-10 flex justify-between items-center">
+                <div class="navbar-start flex items-center justify-between w-full lg:w-auto">
+                    <button class="btn bg-primary text-lg w-24">Blog</button>
+                </div>
+                <div class="navbar-center flex items-center justify-center space-x-4">
+                    <img class="w-8 lg:w-auto" src="./assets/logo.png" alt="Logo">
+                    <a class="btn btn-ghost text-3xl lg:text-xl">Donate Bangladesh</a>
+                </div>
+                <div class="navbar-end flex items-center justify-between w-full lg:w-auto">
+                    <div class="flex justify-center items-center gap-2 p-2 rounded-lg">
+                        <img src="./assets/coin.png" alt="">
+                        <h3 id="balance" class="text-gray font-bold">5500 BDT</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </header>
+
+</body>
+</html>
