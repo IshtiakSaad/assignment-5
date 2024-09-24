@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const donateButton = document.getElementById('donateBtn');
     const blogButton = document.getElementById('blog-btn');  
 
-    // Common function to toggle sections and button colors
     function toggleSections(showHistory) {
         if (showHistory) {
             donationSection.classList.add('hidden');
@@ -39,55 +38,47 @@ document.addEventListener('DOMContentLoaded', () => {
             // Input validation
             if (isNaN(donationAmount) || donationAmount <= 0) {
                 alert("Please enter a valid donation amount greater than zero.");
-                donationInput.value = ''; // Clear the invalid input
+                donationInput.value = ''; 
                 return;
             }
 
             if (donationAmount > balance) {
                 alert("Insufficient balance for this donation.");
-                donationInput.value = ''; // Clear the input
+                donationInput.value = ''; 
                 return;
             }
 
-            // Update campaign balance
             const currentCampaignBalance = parseFloat(campaignBalanceElement.textContent) || 0;
             const updatedCampaignBalance = currentCampaignBalance + donationAmount;
             campaignBalanceElement.textContent = `${updatedCampaignBalance} BDT`;
 
-            // Update user balance
             balance -= donationAmount;
             balanceElement.textContent = `${balance} BDT`;
 
             const campaignName = campaignElement.querySelector('h1').textContent;
             const timestamp = new Date().toLocaleString();
             
-            // Create a container div for the history item
             const historyItem = document.createElement('div');
             historyItem.classList.add('border-solid', 'border-2', 'rounded-xl', 'p-4', 'mb-4');
 
-            // Create the h3 element with bold text for donation details
             const donationInfo = document.createElement('h3');
             donationInfo.innerHTML = `<b>${donationAmount} Taka is Donated for ${campaignName}</b>`;
             historyItem.appendChild(donationInfo);
 
-            // Create the paragraph element for the date with gray text
             const donationDate = document.createElement('p');
             donationDate.textContent = `Date: on ${timestamp} standard time.`;
             donationDate.classList.add('text-gray-500');
             historyItem.appendChild(donationDate);
 
-            // Append the new history item to the history list
             historyList.appendChild(historyItem);
 
-            // Clear the input field
             donationInput.value = '';
 
-            // Show the modal only if the input is valid
+            // need to check before submit
             document.getElementById('my_modal_2').showModal();
         });
     });
 
-    // Use the common function for toggling sections
     historyButton.addEventListener('click', () => {
         toggleSections(true);
     });
