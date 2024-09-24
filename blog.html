@@ -58,5 +58,43 @@
         
     </header>
 
+    <main class="w-full">
+        <div class="w-11/12 mx-auto">
+            <h1 class="text-4xl font-bold my-6">
+                Important FAQs
+            </h1>
+    
+            <div class="collapse bg-base-100 border-solid border-2 ">
+                <input type="radio" name="my-accordion-1" checked="checked" />
+                <div class="collapse-title text-xl font-medium">What is the difference between <code>id</code> and <code>class</code> attributes in HTML?</div>
+                <div class="collapse-content">
+                    <p>The <code>id</code> attribute is unique and can only be used once per page. It is used to identify a single element uniquely. 
+                    The <code>class</code> attribute, on the other hand, can be used multiple times and is used to apply the same style or functionality to multiple elements.</p>
+                </div>
+            </div>
+            <div class="collapse bg-base-100 border-solid border-2">
+                <input type="radio" name="my-accordion-1" />
+                <div class="collapse-title text-xl font-medium">How does Flexbox differ from CSS Grid?</div>
+                <div class="collapse-content">
+                    <p><strong>Flexbox</strong> is a one-dimensional layout model, meaning it works either in a row or a column. It is best used for aligning items in a single direction.</p>
+                    <p><strong>CSS Grid</strong> is a two-dimensional layout model, allowing you to work with both rows and columns simultaneously. It's ideal for creating complex layouts with rows and columns.</p>
+                </div>
+            </div>
+            <div class="collapse bg-base-100 border-solid border-2">
+                <input type="radio" name="my-accordion-1" />
+                <div class="collapse-title text-xl font-medium">What is the purpose of the <code>box-sizing</code> property in CSS?</div>
+                <div class="collapse-content">
+                    <p>The <code>box-sizing</code> property controls how the total width and height of an element are calculated. By default, the width and height are calculated without including padding and border (<code>content-box</code>), but with <code>box-sizing: border-box</code>, the padding and border are included in the total width and height, making it easier to manage element sizes.</p>
+                </div>
+            </div>
+            <div class="collapse bg-base-100 border-solid border-2">
+                <input type="radio" name="my-accordion-1" />
+                <div class="collapse-title text-xl font-medium">What is the role of <code>event delegation</code> in JavaScript?</div>
+                <div class="collapse-content">
+                    <p><strong>Event delegation</strong> is a technique that leverages event propagation to handle events efficiently. Instead of attaching event listeners to multiple child elements, you attach a single listener to a parent element. This listener can manage events for multiple child elements, resulting in better performance and easier maintenance.</p>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

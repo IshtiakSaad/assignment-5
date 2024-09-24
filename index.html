@@ -65,7 +65,7 @@
     </header>
 
     <main id="donationSection" class="w-9/12 flex mx-auto flex-col gap-6 mb-20">
-        <!-- Donation Campaigns -->
+        <!-- Donation Campaigns 1 -->
         <div class="hero-content flex-col gap-6 lg:flex-row lg:w-full border-2 rounded-xl ">
             <img src="./assets/noakhali.png" class="w-full rounded-lg" />
             <div>
@@ -82,25 +82,24 @@
                       <input type="number" class="donation-input input input-bordered rounded-full" placeholder="Write Donation Amount" required />
                     </div>
                     <div class="form-control mt-2">
-                      <button type="button" onclick="my_modal_2.showModal()" class="donate-button btn bg-primary text-black text-lg rounded-full">Donate Now</button>
+                        <button class="donate-button btn bg-primary text-black text-lg rounded-full">Donate Now</button>
                         <dialog id="my_modal_2" class="modal">
                             <div class="modal-box">
-                                <h3 class="text-4xl mb-2 font-bold text-center">Contrates!</h3>
+                                <h3 class="text-4xl mb-2 font-bold text-center">Congratulations!</h3>
                                 <img class="mx-auto" src="./assets/coin.png" alt="">
                                 <p class="py-4 text-center">You Have Donated to Humankind</p>
                                 <h3 class="text-center text-2xl">Successfully</h3>
                                 <div class="modal-action mx-auto flex justify-center">
-                                    <form method="dialog">
-                                        <button class="btn">Close Confirmation</button>
-                                    </form>
+                                    <button class="btn" onclick="my_modal_2.close()">Close Confirmation</button>
                                 </div>
                             </div>
                         </dialog>
                     </div>
+                    
                 </form>
             </div>
         </div>
-
+        <!-- Donation Campaigns 2 -->
         <div class="hero-content flex-col gap-6 lg:flex-row lg:w-full border-2 rounded-xl ">
             <img src="./assets/feni.png" class="w-full rounded-lg" />
             <div>
@@ -121,7 +120,7 @@
                 </form>
             </div>
         </div>
-
+        <!-- Donation Campaigns 3 -->
         <div class="hero-content flex-col gap-6 lg:flex-row lg:w-full border-2 rounded-xl ">
             <img src="./assets/quota-protest.png" class="w-full rounded-lg" />
             <div>
